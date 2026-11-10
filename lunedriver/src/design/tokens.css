@@ -1,0 +1,47 @@
+:root {
+  --ld-bg: #020814;
+  --ld-bg-mid: #061428;
+  --ld-bg-elevated: #0a1c38;
+  --ld-bg-card: #081830;
+  --ld-bg-card-hover: #0d2448;
+  --ld-bg-nav: rgba(4, 14, 32, 0.94);
+  --ld-accent: #00b4ff;
+  --ld-accent-strong: #4dd2ff;
+  --ld-accent-deep: #0077c2;
+  --ld-glow: rgba(0, 180, 255, 0.5);
+  --ld-glow-soft: rgba(0, 180, 255, 0.2);
+  --ld-border: rgba(0, 196, 255, 0.55);
+  --ld-border-soft: rgba(0, 180, 255, 0.22);
+  --ld-text: #ffffff;
+  --ld-text-muted: #9bb8cc;
+  --ld-text-dim: #6d8498;
+  --ld-ok: #3dffb0;
+  --ld-warn: #ffc857;
+  --ld-radius-sm: 12px;
+  --ld-radius: 20px;
+  --ld-radius-lg: 28px;
+  --ld-radius-pill: 999px;
+  --ld-touch: 56px;
+  --ld-nav-height: 76px;
+  --ld-space-1: 4px;
+  --ld-space-2: 8px;
+  --ld-space-3: 12px;
+  --ld-space-4: 16px;
+  --ld-space-5: 24px;
+  --ld-space-6: 32px;
+  --ld-space-7: 40px;
+  --ld-font: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  --ld-shadow-card: 0 0 0 1px rgba(0, 180, 255, 0.08), 0 8px 28px rgba(0, 40, 80, 0.45),
+    0 0 22px var(--ld-glow-soft);
+  --ld-max: 430px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --ld-max: 640px;
+    --ld-space-4: 22px;
+    --ld-space-5: 32px;
+    --ld-space-6: 44px;
+    --ld-touch: 60px;
+  }
+}

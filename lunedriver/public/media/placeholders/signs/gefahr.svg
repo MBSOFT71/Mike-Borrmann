@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="16" fill="#071428"/>
+  <path d="M100 28 L176 168 H24 Z" fill="#1a0a0a" stroke="#e23d3d" stroke-width="8" stroke-linejoin="round"/>
+  <text x="100" y="128" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Manrope, sans-serif" font-weight="800">!</text>
+  <text x="100" y="192" text-anchor="middle" fill="#9bb8cc" font-size="11" font-family="Manrope, sans-serif">Platzhalter, nicht amtlich</text>
+</svg>

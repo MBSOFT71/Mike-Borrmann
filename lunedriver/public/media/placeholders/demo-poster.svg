@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#071428"/>
+  <rect x="24" y="24" width="592" height="312" rx="24" stroke="#00b4ff" stroke-opacity="0.5"/>
+  <circle cx="320" cy="168" r="42" stroke="#00b4ff" stroke-width="3"/>
+  <path d="M308 148 L344 168 L308 188 Z" fill="#00b4ff"/>
+  <text x="320" y="250" text-anchor="middle" fill="#ffffff" font-family="Manrope, Segoe UI, sans-serif" font-size="22" font-weight="700">Demo-Video</text>
+  <text x="320" y="278" text-anchor="middle" fill="#9bb8cc" font-family="Manrope, Segoe UI, sans-serif" font-size="14">Kein Prüfungsinhalt</text>
+</svg>
