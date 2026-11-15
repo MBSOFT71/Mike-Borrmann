@@ -155,9 +155,14 @@
       const k = el.getAttribute("data-key");
       const on = () => { keys[k] = true; down[k] = true; el.classList.add("hot"); };
       const off = () => { keys[k] = false; el.classList.remove("hot"); };
-      el.addEventListener("pointerdown", (ev) => { ev.preventDefault(); on(); });
+      el.addEventListener("pointerdown", (ev) => {
+        ev.preventDefault();
+        try { el.setPointerCapture(ev.pointerId); } catch (_) {}
+        on();
+      });
       el.addEventListener("pointerup", off);
-      el.addEventListener("pointerleave", off);
+      el.addEventListener("pointercancel", off);
+      el.addEventListener("lostpointercapture", off);
     });
     window.addEventListener("keydown", (e) => {
       const tag = (e.target && e.target.tagName) || "";
@@ -615,7 +620,34 @@
     requestAnimationFrame(tick);
   }
 
+  async function enableTilt() {
+    const btn = document.getElementById("tilt-btn");
+    try {
+      if (typeof DeviceOrientationEvent !== "undefined" && DeviceOrientationEvent.requestPermission) {
+        const perm = await DeviceOrientationEvent.requestPermission();
+        if (perm !== "granted") return;
+      }
+    } catch (_) {
+      return;
+    }
+    window.addEventListener("deviceorientation", (e) => {
+      sensors.ax = clamp((e.gamma || 0) / 45, -1, 1);
+      sensors.ay = clamp(((e.beta || 0) - 35) / 45, -1, 1);
+      sensors.ok = true;
+      const ax = document.getElementById("ax");
+      const ay = document.getElementById("ay");
+      if (ax) ax.value = String(sensors.ax);
+      if (ay) ay.value = String(sensors.ay);
+    });
+    if (btn) {
+      btn.classList.add("on");
+      btn.textContent = "Neigung aktiv";
+    }
+  }
+
   bindPad();
   wireForm();
+  const tiltBtn = document.getElementById("tilt-btn");
+  if (tiltBtn) tiltBtn.addEventListener("click", enableTilt);
   tick();
 })();
