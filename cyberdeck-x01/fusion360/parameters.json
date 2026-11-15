@@ -63,6 +63,7 @@
     "P_clearance": 0.3,
     "P_gap_display": 2.0,
     "P_hinge_knuckle": 8.0,
+    "P_hinge_setback": 4.0,
     "P_hinge_angle": 110.0,
     "P_sled_travel": 40.0,
     "P_rail_overlap": 28.0,

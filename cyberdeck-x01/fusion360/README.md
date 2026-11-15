@@ -1,28 +1,40 @@
-# Fusion 360 — Phase B
+# Fusion 360 — Phase B / B.1
 
-In der Autorenumgebung ist Fusion 360 **nicht** installiert. Das Skript ist **nicht** in Fusion getestet.
+In der Autorenumgebung ist Fusion 360 **nicht** installiert und **nicht** ausgeführt.
+
+Vorschau ohne Fusion: aus `cyberdeck-x01/`
+
+```
+python3 -m pip install cascadio matplotlib numpy
+python3 fusion360/preview.py
+```
+
+Ausgabe: `preview/*.png` und `preview/VALIDATION.md`. Das ist keine Fusion-Ausführung.
 
 ## Installation
 
-1. Fusion 360 → Dienstprogramme → Add-Ins → **Skripte und Add-Ins**.
+1. Fusion → Dienstprogramme → Add-Ins → **Skripte und Add-Ins**.
 2. Ordner `X01_Orbital_PhaseB` nach  
-   `…/Autodesk/Autodesk Fusion 360/API/Scripts/` kopieren  
-   (Skript **nicht** über eine vorhandene Datei gleichen Namens legen).
-3. STEP-Dateien liegen unter `cyberdeck-x01/refs/`. Das Skript sucht  
-   `../../refs/Badgeware_Solid.step` relativ zum Skriptordner.  
-   Sonst Dateidialog.
+   `Autodesk/Autodesk Fusion 360/API/Scripts/` **kopieren**, nichts überschreiben.
+3. STEPs liegen in `cyberdeck-x01/refs/`. Das Skript sucht den Ordner mehrere Ebenen über dem Skript. Sonst Dateidialog  
+   `Badgeware_Solid.step` und `Badge_Case_Solid_w_Holes.step`.
 
 ## Start
 
-- Neues leeres Dokument ist unnötig: das Skript **erzeugt selbst** `X01_ORBITAL_PhaseB_<UTC>`.
+- Skript **erzeugt selbst** ein neues Dokument `X01_ORBITAL_PhaseB_<UTC>`.
 - Ausführen: `X01_Orbital_PhaseB`.
-- Erneut ausführen = weiteres neues Dokument, nichts überschreiben.
+- Nochmal ausführen = weiteres Dokument.
 
-## Danach in Fusion
+## Was du sehen solltest
 
-- Parameter `C_`/`D_`/`P_`/`M_` prüfen.
-- `_REF_Tufty_Holes` sichtbar schalten, wenn USB/Tasten ausgerichtet werden.
-- Platzhalter `PLACEHOLDER_*` nicht als Druckteile exportieren.
+- Browser: `_REF_Tufty_Buck` (Solid), `_REF_Tufty_Holes` (Lampe aus), Lid/Base/Sled/Rails/Hinge/Sensor.
+- User-Parameters `C_` / `D_` / `P_` / `M_`.
+- Hüllen heißen `PLACEHOLDER_*` — **kein** Druckexport.
+- STEPs nur importiert, nicht skaliert.
 
-Parameter-Quelle: [parameters.json](parameters.json)  
-Hüllenrechnung (ohne Fusion): `python3 check_envelope.py`
+Wenn der Import fehlschlägt: Dateidialog, danach `fit`.  
+Wenn Boxen an der falschen Achse sitzen: BRep-Pfad ist fehlgeschlagen, Fallback-Extrusion — Meldung im Textfenster.
+
+Parameter: [parameters.json](parameters.json)  
+Hülle: `python3 check_envelope.py`  
+Validierung: [../PHASE-B1.md](../PHASE-B1.md)

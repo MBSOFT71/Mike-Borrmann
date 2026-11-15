@@ -49,8 +49,9 @@ def main() -> None:
     else:
         print("  RESULT: 45 mm is enough IF rails sit beside the pad, not under it.")
         print("          Clip stays: lid pocket. No official clip-free STEP exists.")
-    if z_budget < S["C_pad_w"]:
-        print("  WARN: leftover Z < pad depth; sled housing shares lid footprint.")
+    print("  pad Z is under the display (clamshell), not in the leftover depth strip.")
+    if z_budget < 0:
+        print("  WARN: hinge+walls eat the extra depth.")
 
 
 if __name__ == "__main__":

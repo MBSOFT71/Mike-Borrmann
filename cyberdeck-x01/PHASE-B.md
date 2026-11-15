@@ -103,4 +103,5 @@ Kit-Kabel nicht als 200 mm behaupten — 200 mm ist die **Handelsoption**, Param
 
 ## Nächster Schritt
 
-Phase C: Schlitten und Schienen aus den Platzhaltern, sobald M07/M08/M10 da sind oder bewusst mit P_-Werten weitergebaut wird. Keine STL vor Phase G.
+Phase B.1 (Validierung und Vorschau): [PHASE-B1.md](PHASE-B1.md).  
+Phase C: Schlitten/Schienen aus den Platzhaltern. Keine STL vor Phase G.
