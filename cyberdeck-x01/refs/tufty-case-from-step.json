@@ -1,0 +1,100 @@
+{
+  "source_file": "Badge_Case_Solid_w_Holes.step",
+  "header_name": "Badge_Case_Solid_w_Holes.step",
+  "header_timestamp": "2026-07-13T10:26:38+01:00",
+  "originating_system": "Autodesk Translation Framework v15.8.0.0",
+  "units": "mm",
+  "method": "VERTEX_POINT bounding box and CIRCLE/CYLINDRICAL_SURFACE placements; spline control points ignored",
+  "coordinate_system": {
+    "comment": "STEP origin kept. Front = display. USB on -X. Lanyard tab on -Z. Clip on -Y.",
+    "+X": "right when looking at the display",
+    "+Y": "out of the display (front)",
+    "+Z": "toward the three top buttons",
+    "origin": "X mid-width; Y not mid-thickness; Z not mid-height (geometric Z centre ≈ -5)"
+  },
+  "envelope": {
+    "xmin": -42.001,
+    "xmax": 42.001,
+    "ymin": -14.758,
+    "ymax": 6.6,
+    "zmin": -43.0,
+    "zmax": 33.001,
+    "width_X": 84.002,
+    "height_Z": 76.001,
+    "thickness_Y_including_clip": 21.358,
+    "shop_claim": "84 x 76 x 20",
+    "shop_vs_step": "In-plane matches 84 x 76. Thickness 21.36 mm includes rear clothing clip; shop 20 mm is rounded / without stressing the clip."
+  },
+  "front": {
+    "face_Y": 6.6,
+    "button_and_display_recess_Y": 5.1,
+    "bezel_step": 1.5
+  },
+  "buttons_five_front": {
+    "shape": "rounded square wells in the case",
+    "outer": "6.80 x 6.80 mm",
+    "corner_R": 0.5,
+    "pitch_mm": 18.0,
+    "centers_XZ": [
+      {"id": "top_left", "X": -18.0, "Z": 27.0},
+      {"id": "top_mid", "X": 0.0, "Z": 27.0},
+      {"id": "top_right", "X": 18.0, "Z": 27.0},
+      {"id": "right_upper", "X": 36.0, "Z": 9.0},
+      {"id": "right_lower", "X": 36.0, "Z": -9.0}
+    ],
+    "note": "Case openings, not button-cap diameter or travel. Map to A/B/C/UP/DOWN still from docs + photo, not from this solid alone."
+  },
+  "usb_c_case_cutout": {
+    "edge": "-X (left)",
+    "shape": "stadium / capsule",
+    "axis": "+X into the case",
+    "center": {"X": -40.106, "Y": -3.581, "Z": 0.016},
+    "cap_radius": 2.4,
+    "cap_centres_Z": [3.565, -3.532],
+    "opening_length_Z": 11.90,
+    "opening_height_Y": 4.80,
+    "inset_from_outer_X": 1.90,
+    "behind_front_face_Y": 10.18,
+    "note": "Cutout in the OEM case. Plug over-travel still M01."
+  },
+  "lanyard_tab": {
+    "Z_range": [-43.0, -32.0],
+    "thickness_Y": 1.6,
+    "Y_range": [-0.8, 0.8],
+    "centre_slot": {
+      "type": "stadium",
+      "circle_R": 1.6166,
+      "circle_centre_Z": -39.842,
+      "approx_half_width_X": 6.49
+    },
+    "corner_holes": {
+      "diameter": 3.0,
+      "centres_XZ": [[-36.0, -39.0], [36.0, -39.0]],
+      "outer_boss_R": 4.0
+    }
+  },
+  "rear_clip": {
+    "ymin": -14.758,
+    "approx_X_span": 34.0,
+    "approx_Z_span": [-12.1, 31.2],
+    "note": "Clothing clip. Drives overall thickness above the shop 20 mm. Needs a lid pocket or must remain outside the closed stack."
+  },
+  "rear_pocket_candidate_qwst": {
+    "status": "not confirmed as Qw/ST",
+    "approx_box_XYZ": {
+      "X": [7.36, 26.61],
+      "Y": [-7.05, -3.40],
+      "Z": [-31.97, -20.18]
+    },
+    "note": "Rear recess on the case. Cable exit still M02 on the physical kit."
+  },
+  "still_not_in_this_file": [
+    "PCB outline",
+    "Display glass vs bezel (M05)",
+    "HOME / RESET / BOOT (M03)",
+    "Qw/ST receptacle coordinates (M02)",
+    "USB plug over-travel (M01 remainder)",
+    "Qw/ST Pad",
+    "Multi-Sensor Stick"
+  ]
+}
