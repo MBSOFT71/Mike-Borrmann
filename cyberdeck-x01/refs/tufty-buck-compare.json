@@ -1,0 +1,39 @@
+{
+  "compared": "2026-11-15",
+  "files": {
+    "Badgeware_Solid.step": {
+      "header_name": "Badgeware_Solid.step",
+      "header_timestamp": "2026-06-16T16:23:04+01:00",
+      "bytes": 587776,
+      "vertex_bbox_mm": {
+        "X": [-42.001, 42.001],
+        "Y": [-14.758, 6.6],
+        "Z": [-43.0, 33.001],
+        "span": [84.002, 21.358, 76.001]
+      },
+      "clothing_clip": true,
+      "lanyard_holes": false,
+      "usb_stadium": true,
+      "role": "Primary buck for lid cavity (solid, no lanyard booleans leaking)"
+    },
+    "Badge_Case_Solid_w_Holes.step": {
+      "header_name": "Badge_Case_Solid_w_Holes.step",
+      "header_timestamp": "2026-07-13T10:26:38+01:00",
+      "bytes": 606013,
+      "vertex_bbox_mm": {
+        "X": [-42.001, 42.001],
+        "Y": [-14.758, 6.6],
+        "Z": [-43.0, 33.001],
+        "span": [84.002, 21.358, 76.001]
+      },
+      "clothing_clip": true,
+      "lanyard_holes": true,
+      "usb_stadium": true,
+      "button_wells": true,
+      "role": "Feature reference: USB, 5 button wells, lanyard slot and corner holes"
+    }
+  },
+  "pimoroni_printables_1779998": "Two bucks: with / without lanyard holes. Not with / without clothing clip.",
+  "no_official_clipless_step": true,
+  "real_stem_kit": "Tufty polycarbonate case includes the clothing clip. Construction keeps a clip pocket in the lid."
+}
