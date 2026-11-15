@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HEXOS — Tufty 2350 Ridge Unit</title>
+  <link rel="stylesheet" href="unit.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="brand">
+        <span class="mark">HEXOS</span>
+        <span class="sub">TUFTY 2350  ·  STEM KIT  ·  RIDGE UNIT</span>
+      </div>
+      <p class="lede">
+        So sollte es aussehen: Clamshell, orange Panzerkanten, Hex-Buttons.
+        Oben der Tufty-Screen, unten das Qw/ST-Pad. Die Software läuft live auf dem Display.
+      </p>
+    </header>
+
+    <div class="studio">
+      <div class="unit" id="unit">
+        <div class="lid">
+          <div class="lid-armor tl"></div>
+          <div class="lid-armor tr"></div>
+          <div class="lid-armor bl"></div>
+          <div class="lid-armor br"></div>
+          <div class="led-bar led-l"></div>
+          <div class="led-bar led-r"></div>
+          <div class="bezel">
+            <canvas id="lcd" width="320" height="240" aria-label="Tufty display"></canvas>
+          </div>
+        </div>
+
+        <div class="hinge">
+          <span class="hinge-ring"></span>
+          <span class="hinge-barrel"></span>
+          <span class="hinge-ring"></span>
+        </div>
+
+        <div class="deck">
+          <div class="deck-armor left">
+            <div class="vent"></div>
+            <div class="orange-cap"></div>
+          </div>
+          <div class="deck-armor right">
+            <div class="led-bar side"></div>
+          </div>
+
+          <div class="speaker" aria-hidden="true"></div>
+
+          <div class="controls">
+            <div class="dpad" aria-label="D-Pad">
+              <button class="dbtn u" data-key="U" aria-label="Up"></button>
+              <button class="dbtn r" data-key="R" aria-label="Right"></button>
+              <button class="dbtn d" data-key="D" aria-label="Down"></button>
+              <button class="dbtn l" data-key="L" aria-label="Left"></button>
+              <span class="dcore"></span>
+            </div>
+
+            <div class="sys">
+              <button class="sysbtn plus" data-key="+" aria-label="Plus">+</button>
+              <button class="sysbtn minus" data-key="-" aria-label="Minus">−</button>
+            </div>
+
+            <div class="face">
+              <button class="hex x" data-key="X" aria-label="X">X</button>
+              <button class="hex y" data-key="Y" aria-label="Y">Y</button>
+              <button class="hex a" data-key="A" aria-label="A">A</button>
+              <button class="hex b" data-key="B" aria-label="B">B</button>
+            </div>
+          </div>
+
+          <div class="chin">
+            <div class="orange-stripe"></div>
+            <div class="led-bar chin-led"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="dock">
+      <div class="card">
+        <h2>Operator</h2>
+        <label>Name <input id="name" maxlength="16" /></label>
+        <label>Nachname <input id="surname" maxlength="16" /></label>
+        <label>Callsign <input id="callsign" maxlength="12" /></label>
+        <label>Titel <input id="title" maxlength="16" /></label>
+      </div>
+      <div class="card">
+        <h2>STEM Stick</h2>
+        <label>Temperatur <input id="temp" type="range" min="10" max="40" step="0.1" value="22.4" /></label>
+        <label>Luftfeuchte <input id="humid" type="range" min="10" max="90" value="48" /></label>
+        <label>Neigung X <input id="ax" type="range" min="-1" max="1" step="0.01" value="0" /></label>
+        <label>Neigung Y <input id="ay" type="range" min="-1" max="1" step="0.01" value="0" /></label>
+        <label>Licht <input id="lux" type="range" min="0" max="400" value="120" /></label>
+      </div>
+      <div class="card keys">
+        <h2>Steuerung</h2>
+        <ul>
+          <li><kbd>Pfeile</kbd> D-Pad</li>
+          <li><kbd>A</kbd> <kbd>S</kbd> <kbd>X</kbd> <kbd>Y</kbd> Face</li>
+          <li><kbd>+</kbd> <kbd>−</kbd> System</li>
+          <li><kbd>Enter</kbd> bestätigen · <kbd>Esc</kbd> zurück</li>
+        </ul>
+        <p class="note">Auf dem echten Badge: Qw/ST-Pad an den I2C-Port, Sensor-Stick daneben. Ohne Pad gehen die fünf Fronttasten.</p>
+      </div>
+      <figure class="card ref">
+        <h2>Ziel-Look</h2>
+        <img src="../docs/reference-unit.jpg" alt="Rugged orange-black clamshell reference" />
+      </figure>
+    </section>
+  </div>
+  <script src="hexos.js"></script>
+</body>
+</html>
