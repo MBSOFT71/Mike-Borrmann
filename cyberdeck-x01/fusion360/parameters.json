@@ -1,0 +1,80 @@
+{
+  "note": "Quelle der Fusion-User-Parameters. C_ bestätigt, D_ aus STEP abgeleitet (kein zweites Herstellermaß), P_ vorläufige Konstruktion, Mxx_ fehlt und ist Platzhalter. Nicht als Hardware erfinden.",
+  "coordinate_system": {
+    "same_as_step": true,
+    "+X": "rechts am Display; USB-C auf -X",
+    "+Y": "aus dem Display; geschlossener Stapel entlang Y",
+    "+Z": "zu den drei oberen Tasten; Scharnier an der Lanyard-Kante (-Z); Schlitten +Z"
+  },
+  "step_files": {
+    "primary_buck": "refs/Badgeware_Solid.step",
+    "feature_reference": "refs/Badge_Case_Solid_w_Holes.step",
+    "clip": "Beide STEPs enthalten den Kleiderclip. Es gibt keine offizielle Clip-lose STEP. Unterschied nur Lanyard-Löcher.",
+    "construction_choice": "Badgeware_Solid als Bohr-Körper (keine Löcher). w_Holes nur für USB/Tasten/Lanyard-Lage. Clip-Tasche im Deckel, weil das STEM-Kit den Clip hat."
+  },
+  "confirmed_mm": {
+    "C_tufty_w": 84.002,
+    "C_tufty_h": 76.001,
+    "C_tufty_t_clip": 21.358,
+    "C_tufty_xmin": -42.001,
+    "C_tufty_xmax": 42.001,
+    "C_tufty_ymin": -14.758,
+    "C_tufty_ymax": 6.6,
+    "C_tufty_zmin": -43.0,
+    "C_tufty_zmax": 33.001,
+    "C_usb_cx": -40.106,
+    "C_usb_cy": -3.581,
+    "C_usb_cz": 0.016,
+    "C_usb_len": 11.9,
+    "C_usb_ht": 4.8,
+    "C_usb_r": 2.4,
+    "C_btn_pitch": 18.0,
+    "C_btn_well": 6.8,
+    "C_btn_r": 0.5,
+    "C_jst_h": 2.95,
+    "C_jst_d": 5.55
+  },
+  "shop_approx_mm": {
+    "comment": "Pimoroni Shop, Pad als approx. gekennzeichnet.",
+    "C_pad_l": 58.0,
+    "C_pad_w": 25.0,
+    "C_pad_h": 6.7,
+    "C_pad_hole_ctc": 52.0,
+    "C_pad_hole_inset": 3.0,
+    "C_pad_r_top": 3.0,
+    "C_pad_r_bot": 10.0,
+    "C_stick_l": 52.0,
+    "C_stick_w": 7.9,
+    "C_stick_h": 4.2
+  },
+  "derived_mm": {
+    "comment": "Aus Vertices der vorhandenen STEPs, kein offizielles zweites CAD.",
+    "D_tufty_t_body": 13.652,
+    "D_body_ymin": -7.052,
+    "D_clip_extra": 7.706
+  },
+  "provisional_mm": {
+    "P_target_w": 160.0,
+    "P_target_d": 110.0,
+    "P_target_h": 45.0,
+    "P_wall": 3.0,
+    "P_floor": 3.0,
+    "P_sled_plate": 3.0,
+    "P_clearance": 0.3,
+    "P_gap_display": 2.0,
+    "P_hinge_knuckle": 8.0,
+    "P_hinge_angle": 110.0,
+    "P_sled_travel": 40.0,
+    "P_rail_overlap": 28.0,
+    "P_rail_w": 8.0,
+    "P_rail_h": 6.0,
+    "P_print_gap": 0.2
+  },
+  "missing_placeholders_mm": {
+    "M01_usb_overtravel": 8.0,
+    "M02_cable_bend": 10.0,
+    "M08_pad_travel": 1.5,
+    "M09_stick_hole_ctc": 45.0,
+    "M10_cable_len": 200.0
+  }
+}

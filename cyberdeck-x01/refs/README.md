@@ -2,9 +2,10 @@
 
 | Datei | Herkunft | Rolle |
 |---|---|---|
-| `Badge_Case_Solid_w_Holes.step` | Pimoroni Badgeware Blank, Printables 1779998, Header `2026-07-13` | 1:1-Solid des **Tufty-2350-Polycarbonat-Gehäuses** inkl. Tasten- und Lanyard-Löchern |
-| `views/` | Mesh-Projektionen aus dieser STEP (Open CASCADE, nur Dokumentation) | Front, Rücken, USB-Kante, Dicke, Lanyard |
+| `Badgeware_Solid.step` | Printables 1779998, Header 16. Jun 2026 | Bohr-Körper: Case **ohne** Lanyard-Löcher, **mit** Clip |
+| `Badge_Case_Solid_w_Holes.step` | Printables 1779998, Header 13. Jul 2026 | Merkmals-Referenz: USB, Tasten, Lanyard-Löcher, **mit** Clip |
+| `tufty-case-from-step.json` | Vertices `w_Holes` | Maße Phase A |
+| `tufty-buck-compare.json` | Vergleich beider STEPs | Clip identisch, Unterschied nur Löcher |
+| `views/` | Mesh-Projektionen aus `w_Holes` | Dokumentation |
 
-Kein PCB-STEP. Pad und Sensor-Stick liegen hier nicht als CAD vor.
-
-Maße: `tufty-case-from-step.json` und [../PHASE-A.md](../PHASE-A.md).
+Keine offizielle STEP ohne Kleiderclip. Pad und Stick ohne Hersteller-CAD.

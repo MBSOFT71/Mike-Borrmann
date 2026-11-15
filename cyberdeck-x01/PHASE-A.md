@@ -131,5 +131,4 @@ Keine druckfertigen Volumenkörper in diesem Schritt. HEXOS unverändert.
 
 ## Nächster Schritt
 
-1. STEM-Kit mit Messschieber: Rest M01–M10 (vor allem Steckerzugabe, Qw/ST-Abgang, HOME/RESET, Pad/Stick, Kit-Kabel).
-2. Phase B: Maßplan + Fusion-Parameter um das importierte Solid, immer noch ohne druckfertiges Gehäuse.
+Phase B liegt unter [PHASE-B.md](PHASE-B.md). Messliste M01–M10 bleibt gültig.

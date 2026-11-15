@@ -1,0 +1,8 @@
+{
+    "autodeskProduct": "Fusion360",
+    "type": "script",
+    "author": "CYBERDECK X-01 ORBITAL",
+    "description": "Phase B parametric skeleton: parameters, reference STEP import, placeholder components. Creates a NEW document. Not print-ready.",
+    "supportedOS": "windows|mac",
+    "editEnabled": true
+}
